@@ -338,7 +338,7 @@ sift = cv2.SIFT_create(nfeatures = 2000)
 kp1, des1 = sift.detectAndCompute(img1, None)
 kp2, des2 = sift.detectAndCompute(img2, None)
 
-bf = cv2.BFMatcher()
+bf = cv2.BFMatcher() # Brute force matching technique
 
 matches = bf.knnMatch(des1, des2, k=2)
 
